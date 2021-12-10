@@ -3,6 +3,6 @@
 <mapper namespace="User">
 	<select id="getUser" resultType="com.my.mybatis.user.UserVO">
 		select userid, username from
-		MEMBER where userid=#{userid} and password=#{password}
+		member where userid=#{userid} and password=#{password}
 	</select>
 </mapper>
