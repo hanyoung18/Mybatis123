@@ -30,9 +30,9 @@ public class BoardController {
 	public String addPostOK(BoardVO vo){
 		int i = boardService.insertBoard(vo);
 		if(i==0)
-			System.out.println("µ¥ÀÌÅÍ Ãß°¡ ½ÇÆĞ");
+			System.out.println("ë°ì´í„° ì¶”ê°€ ì‹¤íŒ¨");
 		else
-			System.out.println("µ¥ÀÌÅÍ Ãß°¡ ¼º°ø!!!");
+			System.out.println("ë°ì´í„° ì¶”ê°€ ì„±ê³µ!!");
 		return "redirect:list";
 	}
 	
@@ -47,9 +47,9 @@ public class BoardController {
 	public String editPostOK(BoardVO vo){
 		int i = boardService.updateBoard(vo);
 		if(i==0)
-			System.out.println("µ¥ÀÌÅÍ ¼öÁ¤ ½ÇÆĞ");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		else
-			System.out.println("µ¥ÀÌÅÍ ¼öÁ¤ ¼º°ø!!!");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!!!");
 		return "redirect:list";
 	}
 	
@@ -57,9 +57,9 @@ public class BoardController {
 	public String deletePost(@PathVariable("id") int id){
 		int i = boardService.deleteBoard(id);
 		if(i==0)
-			System.out.println("µ¥ÀÌÅÍ »èÁ¦ ½ÇÆĞ");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		else
-			System.out.println("µ¥ÀÌÅÍ »èÁ¦ ¼º°ø!!!");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½!!!");
 		return "redirect:../list";
 	}
 }

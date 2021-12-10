@@ -12,6 +12,8 @@ public class BoardVO {
 	private String writer;
 	private String content;
 	private Date regdate;
+	private String mood;
+	private String weather;
 	private int cnt;
 	
 	public int getSeq() {
@@ -49,5 +51,17 @@ public class BoardVO {
 	}
 	public void setCnt(int cnt) {
 		this.cnt = cnt;
+	}
+	public String getMood() {
+		return mood;
+	}
+	public void setMood(String mood) {
+		this.mood = mood;
+	}
+	public String getWeather() {
+		return weather;
+	}
+	public void setWeather(String weather) {
+		this.weather = weather;
 	}
 }
