@@ -14,6 +14,7 @@ public class BoardVO {
 	private Date regdate;
 	private String mood;
 	private String weather;
+	private String photo;
 	private int cnt;
 	
 	public int getSeq() {
@@ -63,5 +64,11 @@ public class BoardVO {
 	}
 	public void setWeather(String weather) {
 		this.weather = weather;
+	}
+	public String getPhoto() {
+		return photo;
+	}
+	public void setPhoto(String photo) {
+		this.photo = photo;
 	}
 }
