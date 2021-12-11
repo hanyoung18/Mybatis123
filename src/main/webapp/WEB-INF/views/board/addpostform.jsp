@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>새 글 쓰기</h1>
-	<form action="addok" method="post">
+	<form action="addok" method="post" enctype="multipart/form-data">
 		<table id="edit">
 			<tr><td>제목</td><td><input type="text" name="title" /></td></tr>
 			<tr><td>글쓴이</td><td><input type="text" name="writer" /></td></tr>
@@ -25,6 +25,8 @@
 			</td></tr>
 			<tr><td>내용</td><td><textarea cols="80" rows="10" name="content" /></textarea></td></tr>
 		</table>
+		
+		
 		<button type="button" onclick="location.href='list'">목록보기</button>
 		<button type="submit">등록하기</button>
 	</form>
