@@ -12,10 +12,18 @@
 		<table id="edit">
 			<tr><td>제목</td><td><input type="text" name="title" /></td></tr>
 			<tr><td>글쓴이</td><td><input type="text" name="writer" /></td></tr>
-			<tr><td>날씨</td><td><input type="text" name="weather" /></td></tr>
-			<tr><td>기분</td><td><input type="text" name="mood" /></td></tr>
-			<tr><td>사진<input type="file" name="photo"></td></tr>
-			<tr><td>내용</td><td><textarea cols="50" rows="5" name="content" /></textarea></td></tr>
+			<tr><td>날씨</td><td>
+			<select name="weather">
+				<option value="Sunny">Sunny</option>
+				<option value="Rainy">Rainy</option>
+				<option value="snowing">snowing</option>
+			</select>
+			</td></tr>
+			<tr><td>기분</td><td>
+			<label><input type="radio" name="mood" value="bad">bad</label>
+			<label><input type="radio" name="mood" value="good">good</label>
+			</td></tr>
+			<tr><td>내용</td><td><textarea cols="80" rows="10" name="content" /></textarea></td></tr>
 		</table>
 		
 		

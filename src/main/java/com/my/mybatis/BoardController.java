@@ -20,6 +20,11 @@ public class BoardController {
 		model.addAttribute("list", boardService.getBoardList());
 		return "board/list";
 	}
+	@RequestMapping(value = "/board/ex", method = RequestMethod.GET)
+	public String exlist(Model model) {
+		model.addAttribute("list", boardService.getBoardList());
+		return "/board/ex";
+	}
 	
 	@RequestMapping(value = "/board/add", method = RequestMethod.GET)
 	public String addPost() {
