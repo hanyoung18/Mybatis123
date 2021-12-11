@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.my.mybatis.user.UserService;
 import com.my.mybatis.user.UserVO;
+import com.mysql.cj.Session;
 
 @Controller
 public class UserController {
@@ -37,4 +38,11 @@ public class UserController {
 			return "redirect:login";
 		}
 	}
+	
+	@RequestMapping(value = "/login/logout")
+	public String logout(HttpSession session) {
+		session.invalidate();
+		return "redirect:login";
+	}
+	
 }
