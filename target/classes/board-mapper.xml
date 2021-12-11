@@ -5,7 +5,7 @@
 		insert into BOARD (title, writer, weather, mood, content) values (#{title} , #{writer} , #{weather}, #{mood}, #{content})
 	</insert>
 	<update id="updateBoard">
-		update BOARD set title=#{title}, content=#{content}, writer=#{writer} weather=#{weather}, mood=#{mood} where seq=#{seq}
+		update BOARD set title=#{title}, writer=#{writer} weather=#{weather}, mood=#{mood}, content=#{content} where seq=#{seq}
 	</update>
 	<delete id="deleteBoard">
 		delete from BOARD where seq=#{seq}

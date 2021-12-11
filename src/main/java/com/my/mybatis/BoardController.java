@@ -52,9 +52,9 @@ public class BoardController {
 	public String editPostOK(BoardVO vo){
 		int i = boardService.updateBoard(vo);
 		if(i==0)
-			System.out.println("������ ���� ����");
+			System.out.println("데이터 추가 실패");
 		else
-			System.out.println("������ ���� ����!!!");
+			System.out.println("데이터 추가 성공!!!");
 		return "redirect:list";
 	}
 	

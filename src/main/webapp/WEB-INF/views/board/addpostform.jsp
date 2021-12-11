@@ -8,7 +8,7 @@
 </head>
 <body>
 <h1>새 글 쓰기</h1>
-	<form action="addok" method="post" enctype="multipart/form-data">
+	<form action="addok" method="post">
 		<table id="edit">
 			<tr><td>제목</td><td><input type="text" name="title" /></td></tr>
 			<tr><td>글쓴이</td><td><input type="text" name="writer" /></td></tr>
