@@ -116,7 +116,7 @@ button[type="submit"] {
 				</tr>
 				<tr>
 					<td class="name">글쓴이</td>
-					<td><input type="text" name="writer" disabled class="second" /></td>
+					<td><input type="text" name="writer" /></td>
 				</tr>
 				<tr>
 					<td class="name">날씨</td>
@@ -141,6 +141,7 @@ button[type="submit"] {
 				<button type="button" onclick="location.href='list'" class="btn">취소하기</button>
 				<button type="submit" class="btn">등록하기</button>
 			</div>
+		</form>
 	</div>
 
 

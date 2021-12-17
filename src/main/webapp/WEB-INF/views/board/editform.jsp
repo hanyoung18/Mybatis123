@@ -108,7 +108,7 @@ button[type="submit"] {
 </head>
 <body>
 	<div class="head">
-		<h1>새 글 쓰기</h1>
+		<h1>수정하기</h1>
 	</div>
 	<div class="main">
 		<form:form commandName="boardVO" method="POST" action="../editok">
@@ -139,16 +139,13 @@ button[type="submit"] {
 			</table>
 			<div class="diary">
 				내용
-				<form:textarea cols="80" rows="5" path="content"/>
+				<form:textarea cols="80" rows="5" path="content" />
 			</div>
 			<div class="btns">
 				<button type="button" onclick="location.href='../list'" class="btn">취소하기</button>
 				<button type="submit" class="btn">등록하기</button>
 			</div>
+		</form:form>
 	</div>
-
-
-
-	</form:form>
 </body>
 </html>
