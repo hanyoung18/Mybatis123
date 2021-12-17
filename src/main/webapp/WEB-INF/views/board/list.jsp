@@ -67,6 +67,8 @@ button[type="submit"] {
 
 	<div class="w3-container w3-teal" id="head">
 		<h1>Share daily life</h1>
+		<button type="button" onclick="location.href='add'">새글쓰기</button>
+				<button type="button" onclick="location.href='../login/logout'">로그아웃</button>
 	</div>
 
 	<div class="w3-content">
