@@ -2,38 +2,57 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <%@ page session="false"%>
+
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8">
-<title>boardList</title>
+<title>Diary</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <style>
-#list {
-	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
-	border-collapse: collapse;
+.w3-container w3-teal {
+	background-color: rgb(204, 118, 84);
+}
+
+#head {
+	background-color: rgb(204, 118, 84);
+}
+
+#right {
+	float: right;
+}
+
+#content {
+	border-radius: 5px;
+	border: burlywood 2px solid;
+	background-color: rgb(255, 235, 211);
+	font-size: medium;
+	font-family: "Noto Sans KR", sans-serif;
+	padding: 1em;
+}
+
+.btns {
+	display: flex;
 	width: 100%;
+	justify-content: end;
+	padding-right: 40px;
 }
 
-#list td, #list th {
-	border: 1px solid #ddd;
-	padding: 8px;
-	text-align: center;
+.btn {
+	padding: 0.5em;
+	margin: 0 15px;
+	border: solid 3px bisque;
+	background-color: rgb(255, 245, 234);
+	border-radius: 10px;
 }
 
-#list tr:nth-child(even) {
-	background-color: #f2f2f2;
+.btn:hover {
+	background-color: rgb(255, 196, 132);
+	cursor: pointer;
 }
 
-#list tr:hover {
-	background-color: #ddd;
-}
-
-#list th {
-	padding-top: 12px;
-	padding-bottom: 12px;
-	text-align: center;
-	background-color: #006bb3;
-	color: white;
+button[type="submit"] {
+	margin-right: 50px;
 }
 </style>
 </head>
@@ -45,36 +64,33 @@
 	}
 </script>
 <body>
-	<h1>일기장</h1>
-	<table id="list">
-		<tr>
-			<th>Id</th>
-			<th>Title</th>
-			<th>Writer</th>
-			<th>Weather</th>
-			<th>mood</th>
-			<th>Content</th>
-			<th>Regdate</th>
-			<th>Edit</th>
-			<th>Delete</th>
-		</tr>
+
+	<div class="w3-container w3-teal" id="head">
+		<h1>Share daily life</h1>
+	</div>
+
+	<div class="w3-content">
 		<c:forEach items="${list}" var="u">
-			<tr>
-				<td>${u.seq}</td>
-				<td>${u.title}</td>
-				<td>${u.writer}</td>
-				<td>${u.weather}</td>
-				<td>${u.mood}</td>
-				<td>${u.content}</td>
-				<td>${u.regdate}</td>
-				<td><a href="editform/${u.seq}">글수정</a></td>
-				<td><a href="javascript:delete_ok('${u.seq}')">글삭제</a></td>
-			</tr>
+			<div class="w3-row w3-margin">
+				<div class="w3-twothird w3-container" id="content">
+					<h2>${u.title}</h2>
+					<p style="height: 28px">
+						Id: ${u.seq} 글쓴이:${u.writer}<br>기분: ${u.mood} 날씨:
+						${u.weather}
+					</p>
+					<p>
+						<br>내용<br> ${u.content} <br> <br>작성일:
+						${u.regdate} <br>
+					</p>
+					<p>
+						<button type="button" class="btn" id="right"
+							onclick="location.href='editform/${u.seq}'">수정하기</button>
+						<button type="button" class="btn" id="right"
+							onclick="javascript:delete_ok('${u.seq}')">삭제하기</button>
+					</p>
+				</div>
+			</div>
 		</c:forEach>
-	</table>
-	<br />
-	<button type="button" onclick="location.href='add'">새글쓰기</button>
-	<button type="button" onclick="location.href='../login/logout'">로그아웃</button>
-	<button type="button" onclick="location.href='ex'">ex</button>
+	</div>
 </body>
 </html>
