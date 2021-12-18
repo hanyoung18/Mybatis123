@@ -120,7 +120,7 @@ button[type="submit"] {
 				</tr>
 				<tr>
 					<td class="name">글쓴이</td>
-					<td><form:input path="writer" disabled="true" class="second" /></td>
+					<td><form:input path="writer" class="second" /></td>
 				</tr>
 				<tr>
 					<td class="name">날씨</td>

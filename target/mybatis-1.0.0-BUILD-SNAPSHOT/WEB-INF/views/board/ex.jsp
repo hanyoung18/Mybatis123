@@ -26,7 +26,7 @@
 				<button type="button" onclick="location.href='../login/logout'">로그아웃</button>
 		</h1>
 	</div>
-	<div class="w3-content">
+	<div class="w3-content" style="background-color: rgb(204, 118, 84);">
 		<c:forEach items="${list}" var="u">
 			<div class="w3-row w3-margin">
 				<div class="w3-third">
